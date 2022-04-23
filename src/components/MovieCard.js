@@ -2,7 +2,7 @@ import React from "react";
 import StarRatingComponent from "react-star-rating-component";
 import "./MovieCard.css";
 const MovieCard = (props) => {
-  const { title, description, posterUrl, rate }=props.movie
+  const { title, description, posterUrl, rate, trailer } = props.movie;
   return (
     <div className="card">
       <div className="poster">
@@ -15,6 +15,9 @@ const MovieCard = (props) => {
         </div>
         <div className="info">
           <p>{description}</p>
+        </div>
+        <div>
+        <a href={trailer}>Watch Trailer</a>
         </div>
       </div>
     </div>
